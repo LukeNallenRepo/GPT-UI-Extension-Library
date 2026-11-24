@@ -1,0 +1,289 @@
+{
+  "version": "2.3.0",
+  "updated": "2026-11-23",
+  "status": "integrated-portable-ui-extension-architecture",
+  "component_families": {
+    "navigation": [
+      "AppShell",
+      "TopBar",
+      "Sidebar",
+      "MobileNav",
+      "Breadcrumbs",
+      "WorkspaceSwitcher",
+      "Tabs",
+      "CommandPalette",
+      "ContextMenu",
+      "NotificationCenter",
+      "Search"
+    ],
+    "actions_forms": [
+      "Button",
+      "IconButton",
+      "ButtonGroup",
+      "TextInput",
+      "Textarea",
+      "Select",
+      "Combobox",
+      "Checkbox",
+      "RadioGroup",
+      "Switch",
+      "Slider",
+      "DatePicker",
+      "FormField",
+      "ValidationMessage"
+    ],
+    "content_feedback": [
+      "Card",
+      "Panel",
+      "Accordion",
+      "Tooltip",
+      "Popover",
+      "Modal",
+      "Drawer",
+      "Toast",
+      "Alert",
+      "Badge",
+      "Avatar",
+      "Skeleton",
+      "EmptyState",
+      "ErrorState",
+      "Progress"
+    ],
+    "data_operations": [
+      "DataTable",
+      "FilterBar",
+      "MetricCard",
+      "StatusBadge",
+      "Timeline",
+      "ActivityFeed",
+      "TreeView",
+      "FileList",
+      "LogViewer",
+      "DiffViewer",
+      "Pagination"
+    ],
+    "visualisation": [
+      "LineChart",
+      "BarChart",
+      "AreaChart",
+      "Heatmap",
+      "NetworkGraph",
+      "NodeGraph",
+      "StateTransition",
+      "FeedbackLoop",
+      "ResonanceGauge",
+      "Waveform",
+      "AudioSpectrum",
+      "HierarchyTree"
+    ],
+    "agents_workflows": [
+      "AgentCard",
+      "AgentStatus",
+      "RoleAssignment",
+      "TriggerEditor",
+      "TaskQueue",
+      "TaskManifest",
+      "ExecutionLog",
+      "WorkflowCanvas",
+      "ApprovalPanel",
+      "RetryPanel",
+      "BatchRunControls",
+      "WeeklyReport"
+    ],
+    "document_rendering": [
+      "MarkdownDocumentRenderer",
+      "MarkdownDashboardRenderer"
+    ],
+    "application_shell": [
+      "PageHeader",
+      "NavigationRail",
+      "NotificationCenter",
+      "CommandPalette"
+    ],
+    "dashboard": [
+      "DashboardFrame",
+      "KPIGrid",
+      "PriorityQueue",
+      "ProgressCard",
+      "ComparisonCard",
+      "DataQualityCard",
+      "SegmentBreakdown",
+      "ChartPanel"
+    ],
+    "project_workspace": [
+      "ProjectHeader",
+      "MilestoneList",
+      "ResourceCard",
+      "DocumentList",
+      "AgentRoster",
+      "AgentAssignmentPanel"
+    ],
+    "creative_studio": [
+      "EditorShell",
+      "MainCanvas",
+      "AudioVisualizer",
+      "Timeline",
+      "PropertiesPanel",
+      "TransportControls"
+    ],
+    "interaction_feedback": [
+      "Toast",
+      "EmptyState",
+      "ReadOnlyBanner",
+      "ActivityFeed"
+    ],
+    "navigation_application_structure": [
+      "DynamicApplicationHeader",
+      "SidebarNavigation",
+      "CollapsibleNavigationGroup",
+      "MultiTabWorkspace",
+      "BreadcrumbNavigation",
+      "ProjectSwitcher",
+      "AgentSwitcher",
+      "ContextualActionMenu",
+      "VersionIndicator",
+      "SynchronisationIndicator",
+      "Modal",
+      "Drawer"
+    ],
+    "dashboard_information": [
+      "ActivityTimeline",
+      "SearchableResourceList",
+      "SortingControl",
+      "ExpandableInformationPanel",
+      "DashboardGrid",
+      "ComparisonPanel",
+      "SystemHealthIndicator",
+      "CircularProgress"
+    ],
+    "visualisation_extended": [
+      "CircularRelationshipDiagram",
+      "BehaviouralFeedbackLoop",
+      "ProbabilityDistribution",
+      "TrajectoryProjection",
+      "TimeSeriesChart",
+      "WaveformDisplay",
+      "HierarchicalTreeDiagram"
+    ],
+    "agent_automation_extended": [
+      "AgentProfileCard",
+      "RoleAssignmentPanel",
+      "TriggerConfiguration",
+      "AgentCommunicationStream",
+      "ErrorPanel",
+      "BatchExecutionControls",
+      "WeeklyTaskManifest"
+    ],
+    "resource_knowledge": [
+      "FileExplorer",
+      "ResourceRegistry",
+      "MetadataEditor",
+      "VersionHistory",
+      "ProvenanceViewer",
+      "DocumentPreview",
+      "ImportExportControls",
+      "DependencyVisualiser",
+      "KnowledgeGraph",
+      "SearchRetrievalInterface",
+      "ResourceValidationPanel"
+    ],
+    "interactive_application": [
+      "SimulationControls",
+      "ScenarioConfiguration",
+      "InteractiveQuestionnaire",
+      "ReflectionJournal",
+      "AchievementSystem",
+      "QuestInterface",
+      "ChallengeCard",
+      "AudioPlayer",
+      "WaveformControls",
+      "InteractiveMap",
+      "InteractiveNode",
+      "RealTimeOutputPanel"
+    ]
+  },
+  "theme_families": [
+    "neutral-product",
+    "light-product",
+    "high-contrast",
+    "creative-studio",
+    "data-workbench",
+    "warm-editorial",
+    "neon-dark"
+  ],
+  "evidence_labels": [
+    "SOURCE-VERIFIED",
+    "DOCUMENTED",
+    "INFERRED",
+    "PROPOSED",
+    "NOT INSPECTED"
+  ],
+  "app_inventory": "03_APP_LIBRARY/APP_INVENTORY.json",
+  "theme_architecture": {
+    "presets": "../01_DESIGN_SYSTEM/THEME_PRESETS/theme_presets.json",
+    "style_components": "STYLE_COMPONENTS/",
+    "rule": "Theme presets and visual treatments are app-agnostic; app profiles supply only brand overrides."
+  },
+  "style_components": [
+    "Callout",
+    "DashboardFrame",
+    "NavigationLink",
+    "ReadOnlyBanner"
+  ],
+  "component_contracts": {
+    "MarkdownDocumentRenderer": "09_IMPLEMENTATION/markdown_dashboard_renderer.md",
+    "MarkdownDashboardRenderer": "09_IMPLEMENTATION/markdown_dashboard_renderer.md",
+    "PageHeader": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "NavigationRail": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "NotificationCenter": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "CommandPalette": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "DashboardFrame": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "KPIGrid": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "PriorityQueue": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ProgressCard": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ComparisonCard": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "DataQualityCard": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "SegmentBreakdown": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ChartPanel": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ProjectHeader": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "MilestoneList": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ResourceCard": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "DocumentList": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "AgentRoster": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "AgentAssignmentPanel": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "EditorShell": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "MainCanvas": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "AudioVisualizer": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "Timeline": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "PropertiesPanel": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "TransportControls": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "Toast": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "EmptyState": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ReadOnlyBanner": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ActivityFeed": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+    "ChatGPTVisualAdapter": "09_IMPLEMENTATION/CHATGPT_VISUAL_ADAPTER.md",
+    "UIExtensionArchitecture": "UI_EXTENSION_ARCHITECTURE.md"
+  },
+  "layout_registry": "LAYOUT_REGISTRY.md",
+  "mount_instructions": "MOUNT_INSTRUCT.md",
+  "app_builder_instructions": "APP_BUILDER_INSTRUCT.md",
+  "portable_specification": "02_COMPONENT_LIBRARY/COMPONENT_CATALOG_EXPANSION.md",
+  "architecture": {
+    "specification": "UI_EXTENSION_ARCHITECTURE.md",
+    "layers": [
+      "ui-extension-registry",
+      "universal-ui-component-library",
+      "visual-enhancement-system"
+    ],
+    "logical_import_packages": {
+      "ui-core": "01_DESIGN_SYSTEM/",
+      "ui-components": "02_COMPONENT_LIBRARY/",
+      "ui-visualisations": "02_COMPONENT_LIBRARY/ and UNIVERSAL_COMPONENT_REGISTRY.md",
+      "ui-workflows": "02_COMPONENT_LIBRARY/ and 12_APP_PROFILES/",
+      "ui-resources": "02_COMPONENT_LIBRARY/ and 03_APP_LIBRARY/",
+      "ui-interactions": "05_INTERACTION_DESIGN/ and 02_COMPONENT_LIBRARY/",
+      "ui-themes": "01_DESIGN_SYSTEM/THEME_PRESETS/ and 07_VISUAL_DESIGN/"
+    },
+    "package_status": "logical-import-boundaries; not claims of separately published executable packages"
+  }
+}
