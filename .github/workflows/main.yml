@@ -1,72 +1,70 @@
----
 
 name: Automatic Root ZIP Extraction
 
 on:
-push:
-branches:
-- main
-paths:
-- "*.zip"
+  push:
+    branches:
+      - main
+    paths:
+      - "*.zip"
 
-workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
-contents: write
+  contents: write
 
 jobs:
-extract:
-runs-on: ubuntu-latest
+  extract:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout main branch
-    uses: actions/checkout@v4
-    with:
-      ref: main
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
-  - name: Extract and delete root ZIP archives
-    run: |
-      python3 <<'PY'
-      import zipfile
-      from pathlib import Path
+      - name: Extract and delete root ZIP archives
+        run: |
+          python3 <<'PY'
+          import zipfile
+          from pathlib import Path
 
-      root = Path.cwd()
-      archives = list(root.glob("*.zip"))
+          root = Path.cwd().resolve()
+          archives = list(root.glob("*.zip"))
 
-      if not archives:
-          print("No root ZIP archives found.")
-          exit(0)
+          if not archives:
+              print("No root ZIP archives found.")
+              exit(0)
 
-      for archive in archives:
-          print(f"Extracting: {archive.name}")
+          for archive in archives:
+              print(f"Extracting: {archive.name}")
 
-          with zipfile.ZipFile(archive, "r") as z:
-              for member in z.infolist():
-                  target = (root / member.filename).resolve()
+              with zipfile.ZipFile(archive, "r") as z:
+                  for member in z.infolist():
+                      target = (root / member.filename).resolve()
 
-                  if not target.is_relative_to(root.resolve()):
-                      raise ValueError(
-                          f"Unsafe ZIP path: {member.filename}"
-                      )
+                      if not target.is_relative_to(root):
+                          raise ValueError(
+                              f"Unsafe ZIP path: {member.filename}"
+                          )
 
-                  z.extract(member, root)
+                      z.extract(member, root)
 
-          # Delete only after successful extraction
-          archive.unlink()
+              archive.unlink()
+              print(f"Extracted and deleted: {archive.name}")
+          PY
 
-          print(f"Extracted and deleted: {archive.name}")
-      PY
+      - name: Commit extracted files and ZIP deletion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-  - name: Commit extracted files and ZIP deletion
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
 
-      git add -A
-
-      if git diff --cached --quiet; then
-        echo "No changes to commit."
-      else
-        git commit -m "Extract ZIP and remove archive"
-        git push origin main
-      fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Extract ZIP and remove archive"
+            git push origin main
+          fi
+          w
