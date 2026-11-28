@@ -1,7 +1,0 @@
-interface:
-  display_name: "Prompt Master"
-  short_description: "Engineer prompts and briefs"
-  default_prompt: "Engineer a precise prompt for this task."
-  brand_color: "#E58A2B"
-policy:
-  allow_implicit_invocation: true
