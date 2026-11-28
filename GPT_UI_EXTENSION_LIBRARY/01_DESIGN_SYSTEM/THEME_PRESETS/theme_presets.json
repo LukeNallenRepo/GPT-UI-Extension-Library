@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "principle": "Presets are reusable starting points; app branding is applied as a small override layer.",
+  "presets": {
+    "neutral-product": {
+      "label": "Neutral Product",
+      "description": "Balanced default for general-purpose SaaS and productivity tools.",
+      "tokens": {
+        "canvas": "#0B0D12",
+        "surface-1": "#121722",
+        "surface-2": "#1A2230",
+        "surface-raised": "#222D3D",
+        "text-primary": "#F4F6FA",
+        "text-secondary": "#B8C2D2",
+        "text-muted": "#8793A5",
+        "accent-primary": "#7186FF",
+        "accent-secondary": "#49BBD0",
+        "border-subtle": "rgba(190,205,230,.12)"
+      }
+    },
+    "light-product": {
+      "label": "Light Product",
+      "description": "Bright, clean workspace for productivity and content-heavy applications.",
+      "tokens": {
+        "canvas": "#F5F7FB",
+        "surface-1": "#FFFFFF",
+        "surface-2": "#EEF2F8",
+        "surface-raised": "#FFFFFF",
+        "text-primary": "#172033",
+        "text-secondary": "#4D5A70",
+        "text-muted": "#69778D",
+        "accent-primary": "#4D5CE6",
+        "accent-secondary": "#087E91",
+        "border-subtle": "rgba(24,40,68,.12)"
+      }
+    },
+    "high-contrast": {
+      "label": "High Contrast",
+      "description": "Maximum legibility for accessibility-focused or dense operational interfaces.",
+      "tokens": {
+        "canvas": "#000000",
+        "surface-1": "#101010",
+        "surface-2": "#1D1D1D",
+        "surface-raised": "#292929",
+        "text-primary": "#FFFFFF",
+        "text-secondary": "#E5E5E5",
+        "text-muted": "#C8C8C8",
+        "accent-primary": "#FFE45C",
+        "accent-secondary": "#64E8FF",
+        "border-subtle": "rgba(255,255,255,.35)"
+      }
+    },
+    "creative-studio": {
+      "label": "Creative Studio",
+      "description": "Expressive but controlled palette for creator, media and design tools.",
+      "tokens": {
+        "canvas": "#111019",
+        "surface-1": "#191725",
+        "surface-2": "#242039",
+        "surface-raised": "#30294A",
+        "text-primary": "#F7F4FF",
+        "text-secondary": "#C9C1DE",
+        "text-muted": "#9A91B4",
+        "accent-primary": "#B38AFF",
+        "accent-secondary": "#F08BBE",
+        "border-subtle": "rgba(210,190,255,.16)"
+      }
+    },
+    "data-workbench": {
+      "label": "Data Workbench",
+      "description": "Low-distraction analytical theme with clear chart and status semantics.",
+      "tokens": {
+        "canvas": "#0D1318",
+        "surface-1": "#141E25",
+        "surface-2": "#1B2932",
+        "surface-raised": "#253640",
+        "text-primary": "#F0F6F8",
+        "text-secondary": "#B5C7CF",
+        "text-muted": "#8298A3",
+        "accent-primary": "#58B9D8",
+        "accent-secondary": "#8BCB9A",
+        "border-subtle": "rgba(185,215,225,.14)"
+      }
+    },
+    "warm-editorial": {
+      "label": "Warm Editorial",
+      "description": "Editorial and reading-oriented theme with warm surfaces and restrained accents.",
+      "tokens": {
+        "canvas": "#F4F0E8",
+        "surface-1": "#FFFCF5",
+        "surface-2": "#EAE4D8",
+        "surface-raised": "#FFFFFF",
+        "text-primary": "#28251F",
+        "text-secondary": "#5D574D",
+        "text-muted": "#777064",
+        "accent-primary": "#9A5B3D",
+        "accent-secondary": "#58786C",
+        "border-subtle": "rgba(55,45,30,.14)"
+      }
+    },
+    "neon-dark": {
+      "label": "Neon Dark",
+      "description": "Optional high-energy dark interface treatment using violet and cyan lighting accents, layered surfaces and restrained neon detail. Use selectively; preserve contrast and reduced-motion support.",
+      "tokens": {
+        "canvas": "#050509",
+        "surface-1": "#101018",
+        "surface-2": "#191927",
+        "surface-raised": "#242437",
+        "text-primary": "#F7F7FC",
+        "text-secondary": "#C4C4D6",
+        "text-muted": "#9292AA",
+        "accent-primary": "#A855F7",
+        "accent-secondary": "#22D3EE",
+        "border-subtle": "rgba(168,85,247,.22)",
+        "border-strong": "rgba(34,211,238,.42)",
+        "focus-ring": "#22D3EE",
+        "success": "#34D399",
+        "warning": "#FBBF24",
+        "danger": "#FB7185",
+        "info": "#38BDF8"
+      }
+    }
+  }
+}

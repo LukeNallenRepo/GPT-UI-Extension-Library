@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Index of generic, reusable application interface profiles.",
+  "profiles": [
+    {
+      "id": "general-application",
+      "file": "GENERAL_APPLICATION_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "data-workbench",
+      "file": "DATA_WORKBENCH_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "creative-studio",
+      "file": "CREATIVE_STUDIO_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "editorial-content",
+      "file": "EDITORIAL_CONTENT_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "operations-workspace",
+      "file": "OPERATIONS_WORKSPACE_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "project-workspace",
+      "file": "PROJECT_WORKSPACE_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "resource-library",
+      "file": "RESOURCE_LIBRARY_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    },
+    {
+      "id": "commerce-experience",
+      "file": "COMMERCE_EXPERIENCE_PROFILE.md",
+      "scope": "generic",
+      "external_dependencies": []
+    }
+  ]
+}
